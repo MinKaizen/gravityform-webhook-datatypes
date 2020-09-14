@@ -16,7 +16,7 @@ class GravityformWebhookDatatypesPlugin {
         add_filter( 'gform_webhooks_request_data', function ( $request_data, $feed ) {
             foreach ( $request_data as $key => $value ) {
                 if ( strpos( $key, '_as_json' ) !== false ) {
-                    $request_data [ str_replace( "_as_json", "", $key ) ] = json_decode( $value, true );
+                    $request_data [ str_replace( "_as_json", "", $key ) ] = json_decode( str_replace( "'", '"', $value), true );
                     unset( $request_data [ $key ] );
                 }
             }
