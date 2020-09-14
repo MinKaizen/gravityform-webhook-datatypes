@@ -12,7 +12,7 @@
 defined ( 'ABSPATH' ) or die;
 
 // Check for Gravity Forms Webhook addon
-if ( !class_exists( "GF_Webhooks_Bootstrap" ) ) {
+if ( !class_exists( "GFForms" ) ) {
     return;
 }
 
