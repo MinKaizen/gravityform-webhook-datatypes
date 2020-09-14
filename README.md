@@ -29,6 +29,8 @@ It's a bit hacky, so please read the Usage and Example sections below.
 
 # Example
 
+## Sending JSON Objects
+
 In the Gravity Forms Webhook GUI:
 ```yaml
 # Note the use of single quotes
@@ -37,7 +39,7 @@ users_as_json: {{'name':'John','gender':'male'}, {'name':'Jill','gender':'female
 
 This will output:
 ```js
-// Note 'users_as_json' is truncated to just 'users'
+// Note '_as_json' is truncated
 users: {
   {
     name: "John",
@@ -48,5 +50,19 @@ users: {
     gender: "female"
   }
 }
+
+```
+
+## Sending int values
+
+In the Gravity Forms Webhook GUI:
+```yaml
+answer_as_int: 42
+```
+
+This will output:
+```js
+// Note '_as_int' is truncated
+answer: 42
 
 ```
