@@ -1,6 +1,14 @@
+# Introduction
+
+The popular Gravity Forms plugin for WordPress has an addon called "Webhooks" which allows you to send form data to a custom URL endpoint.
+
+However it is limited because only string values can be sent. This plugin allows you to send arrays & objects (using psudo JSON syntax) as well as int values.
+
+It's a bit hacky, so please read the Usage and Example sections below.
+
 # Usage
 
-## Send JSON data instead of string
+## Arrays and Objects (JSON Syntax)
 
 1. Append `_as_json'` in the **field name**.
 2. Use JSON syntax with *SINGLE QUOTES* in the **field value**.
